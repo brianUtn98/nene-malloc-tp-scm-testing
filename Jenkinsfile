@@ -18,10 +18,16 @@ pipeline {
                 echo 'Validate....'
             }
         }
+        stage('Analize') {
+            steps {
+                echo 'Analizing...'
+            }
+        }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
             }
 		}
+        
   }
 }
