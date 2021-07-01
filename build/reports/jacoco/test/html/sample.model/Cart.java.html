@@ -13,24 +13,24 @@ import sample.entity.Item;
 
 @Component
 @Scope(value = &quot;session&quot;, proxyMode = ScopedProxyMode.TARGET_CLASS)
-<span class="nc" id="L16">public class Cart implements Serializable {</span>
+<span class="fc" id="L16">public class Cart implements Serializable {</span>
 
   private static final long serialVersionUID = 1L;
 
-<span class="nc" id="L20">  private final Map&lt;String, CartItem&gt; itemMap = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L20">  private final Map&lt;String, CartItem&gt; itemMap = new HashMap&lt;&gt;();</span>
 
-<span class="nc" id="L22">  private final List&lt;CartItem&gt; itemList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L22">  private final List&lt;CartItem&gt; itemList = new ArrayList&lt;&gt;();</span>
 
   public List&lt;CartItem&gt; getCartItemList() {
 <span class="nc" id="L25">    return itemList;</span>
   }
 
   public CartItem getCartItem(String itemId) {
-<span class="nc" id="L29">    return itemMap.get(itemId);</span>
+<span class="fc" id="L29">    return itemMap.get(itemId);</span>
   }
 
   public int getNumberOfItems() {
-<span class="nc" id="L33">    return itemList.size();</span>
+<span class="fc" id="L33">    return itemList.size();</span>
   }
 
   public boolean containsItemId(String itemId) {
@@ -38,17 +38,17 @@ import sample.entity.Item;
   }
 
   public void addItem(Item item, boolean isInStock) {
-<span class="nc" id="L41">    var cartItem = itemMap.get(item.getItemId());</span>
-<span class="nc bnc" id="L42" title="All 2 branches missed.">    if (cartItem == null) {</span>
-<span class="nc" id="L43">      cartItem = new CartItem();</span>
-<span class="nc" id="L44">      cartItem.setItem(item);</span>
-<span class="nc" id="L45">      cartItem.setQuantity(0);</span>
-<span class="nc" id="L46">      cartItem.setInStock(isInStock);</span>
-<span class="nc" id="L47">      itemMap.put(item.getItemId(), cartItem);</span>
-<span class="nc" id="L48">      itemList.add(cartItem);</span>
+<span class="fc" id="L41">    var cartItem = itemMap.get(item.getItemId());</span>
+<span class="pc bpc" id="L42" title="1 of 2 branches missed.">    if (cartItem == null) {</span>
+<span class="fc" id="L43">      cartItem = new CartItem();</span>
+<span class="fc" id="L44">      cartItem.setItem(item);</span>
+<span class="fc" id="L45">      cartItem.setQuantity(0);</span>
+<span class="fc" id="L46">      cartItem.setInStock(isInStock);</span>
+<span class="fc" id="L47">      itemMap.put(item.getItemId(), cartItem);</span>
+<span class="fc" id="L48">      itemList.add(cartItem);</span>
     }
-<span class="nc" id="L50">    cartItem.incrementQuantity();</span>
-<span class="nc" id="L51">  }</span>
+<span class="fc" id="L50">    cartItem.incrementQuantity();</span>
+<span class="fc" id="L51">  }</span>
 
   public void removeItemById(String itemId) {
 <span class="nc" id="L54">    var cartItem = itemMap.remove(itemId);</span>
@@ -78,7 +78,7 @@ import sample.entity.Item;
   }
 
   public boolean isEmpty() {
-<span class="nc" id="L81">    return itemList.isEmpty();</span>
+<span class="fc" id="L81">    return itemList.isEmpty();</span>
   }
 
   public void clear() {

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.java.model.ShoppingCartTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-01T21:53:47" hostname="brian1998-MS-7817" time="0.007">
+  <properties/>
+  <testcase name="addOneItem()" classname="test.java.model.ShoppingCartTest" time="0.007"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
