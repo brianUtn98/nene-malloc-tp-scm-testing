@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Analize') {
             steps {
-                echo 'Analizing...'
+                sh "bash ./gradlew sonarqube   -Dsonar.projectKey=sonar.host.url   -Dsonar.host.url=http://localhost:9000   -Dsonar.login=f879d51f3297d524f653b1965cda824f281b701b"
             }
         }
         stage('Deploy') {
