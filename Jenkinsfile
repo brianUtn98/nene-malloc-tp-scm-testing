@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "git pull origin main"
+                sh "git pull origin master"
    				sh 'bash ./gradlew clean build'
                 sh "bash ./gradlew bootRun"
             }

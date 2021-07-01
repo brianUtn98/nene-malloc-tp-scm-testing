@@ -1,7 +1,7 @@
 package sample.entity;
 
 /** */
-@javax.annotation.Generated(value = { "Doma", "2.46.2" }, date = "2021-07-01T15:54:00.905-0300")
+@javax.annotation.Generated(value = { "Doma", "2.46.2" }, date = "2021-07-01T16:03:09.362-0300")
 @org.seasar.doma.EntityTypeImplementation
 public final class _Account extends org.seasar.doma.jdbc.entity.AbstractEntityType<sample.entity.Account> {
 
